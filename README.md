@@ -47,3 +47,10 @@ docker tag e9ae3c220b23 aws_account_id.dkr.ecr.region.amazonaws.com/my-repositor
 docker push aws_account_id.dkr.ecr.region.amazonaws.com/my-repository:tag
 ```
 ### AWS App Runner Deploy
+1. Login into AWS Management Console (https://console.aws.amazon.com/console/).
+2. Selete AWS service: AWS App Runner.
+3. Click "Create service".
+4. In the following page, in "Source" section, select "Container registry" and "Amazon ECR" and then choose the image that we built before.
+5. Choose appropriate deployment trigger and ECR access role.
+6. On next page, select Virtual CPU & memory settings as you wish and enter "8080" for port.
+7. Keep clicking "next" until click "Create & deploy". After a few minutes, your app will be deployed and good to go.
