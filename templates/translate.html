@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Translation</title>
+    </head>
+    <body>
+        <p>Please enter the text you want to translate (from chinese to english):</p>
+        <form method="POST">
+            <input type="text" name="text">
+            <input type="submit" value="translate">
+        </form>
+        {% if name %}
+        </br>{{trans_text}}
+        {% endif %}
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tell a Story</title>
+    </head>
+    <body>
+        <p>Start to make up your story now!</p>
+        <form method="POST">
+            First sentence of your story: <input type="text" name="text" required><br>
+            Length of your story: <input type="number" name="story_len" min='1' requeired><br>
+            <input type="submit" value="submit">
+        </form>
+        {% if name %}
+        </br>
+        <p>Your Story:</p>
+        {{story_text}}
+        {% endif %}
+    </body>
+</html>

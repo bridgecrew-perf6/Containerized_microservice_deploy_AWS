@@ -1,0 +1,7 @@
+pytest==6.2.5
+pylint==2.12.2
+black==21.12b0
+Flask==2.0.3
+transformers[sentencepiece]==4.16.1
+--find-links https://download.pytorch.org/whl/cpu/torch_stable.html
+torch==1.10.2+cpu
