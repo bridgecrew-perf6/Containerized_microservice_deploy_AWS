@@ -36,7 +36,7 @@ docker image ls
 1. create a private Amazon ECR repository
 2. Use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry.
 ```
-aws ecr get-login-password --region **region** | docker login --username AWS --password-stdin **aws_account_id**.dkr.ecr.**region**.amazonaws.com
+aws ecr get-login-password --region _region_ | docker login --username AWS --password-stdin **aws_account_id**.dkr.ecr.**region**.amazonaws.com
 ```
 4. 
 ### AWS App Runner Deploy
