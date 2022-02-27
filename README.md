@@ -23,8 +23,8 @@ docker run kaifengyu16/containerized_microservice_deploy_aws:proj2
 ```
 
 ## How to deploy
-### build a docker image
-1. build a docker image
+### Build a docker image
+1. Build a docker image
 ```
 docker build .
 ```
@@ -32,11 +32,18 @@ docker build .
 ```
 docker image ls
 ```
-### push docker image to ecr
-1. create a private Amazon ECR repository
+### Push docker image to ecr
+1. Create a private Amazon ECR repository
 2. Use the AWS CLI to retrieve an authentication token and authenticate your Docker client to your registry.
 ```
-aws ecr get-login-password --region _region_ | docker login --username AWS --password-stdin **aws_account_id**.dkr.ecr.**region**.amazonaws.com
+aws ecr get-login-password --region region | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
 ```
-4. 
+3. Tag your image to push it to ECR repository:
+```
+docker tag e9ae3c220b23 aws_account_id.dkr.ecr.region.amazonaws.com/my-repository:tag
+```
+4. Push the image to your AWS repository:
+```
+docker push aws_account_id.dkr.ecr.region.amazonaws.com/my-repository:tag
+```
 ### AWS App Runner Deploy
