@@ -13,9 +13,9 @@ def translate(text):
 
 
 def make_story(text, story_len):
-    text_generator = pipeline("text-generation")
+    text_generator = pipeline("text-generation", model='gpt2')
     story = text_generator(text, max_length=story_len, do_sample=False)
-    return story
+    return story[0]['generated_text']
 
 
 @app.route("/translate", methods=["GET", "POST"])
@@ -31,7 +31,7 @@ def do_translate():
 def tell_story():
     if request.method == "POST":
         text = request.form["text"]
-        text_len = request.form["story_len"]
+        text_len = (int(request.form["story_len"]))
         story_text = make_story(text, text_len)
         return render_template("tell_story.html", name=1, story_text=story_text)
     return render_template("tell_story.html", name=0)
