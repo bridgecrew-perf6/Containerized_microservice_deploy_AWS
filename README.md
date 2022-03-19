@@ -15,11 +15,11 @@ To use this app, go to website https://3m6az7rvsu.us-east-1.awsapprunner.com/, c
 
 If you want to run this app locally, you can also pull the docker image from dockerhub:
 ```
-docker pull kaifengyu16/containerized_microservice_deploy_aws:proj2
+docker pull kaifengyu16/containerized_microservice_deploy_aws:proj2_0319
 ```
 And then use the following command to run:
 ```
-docker run kaifengyu16/containerized_microservice_deploy_aws:proj2
+docker run kaifengyu16/containerized_microservice_deploy_aws:proj2_0319
 ```
 
 ## How to deploy
